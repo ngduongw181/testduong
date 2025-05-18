@@ -1,0 +1,18 @@
+name = "backend"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+JWT_SECRET = "b8a9206f3f5c27bf4c3def8f740697be6f0766c60b1f4046aa1a4d294148cacb"
+
+# Cấu hình cho development
+[env.development]
+name = "your-worker-name-dev"
+[env.development.vars]
+DATABASE_URL = "postgresql://postgres:password@localhost:5432/pencraft"
+
+# Cấu hình cho production 
+[env.production]
+name = "your-worker-name"
+[env.production.vars]
+DATABASE_URL = "your-production-database-url"
